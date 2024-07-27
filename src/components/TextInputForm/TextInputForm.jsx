@@ -9,13 +9,13 @@ function TextInputForm({ onSubmit }) {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log("Form submitted", value);
-    onSubmit?.(value); // if onSubmit is defined, call it with the value
+    onSubmit?.(value);
   }
 
   function handleTextInputChange(event) {
     console.log("Text input changed");
     console.log(event.target.value);
-    setValue(event.target.value); // whenever I type in the input field, it will update the value
+    setValue(event.target.value);
   }
 
   return (
