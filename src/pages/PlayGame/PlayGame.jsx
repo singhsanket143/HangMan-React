@@ -8,7 +8,7 @@ function PlayGame() {
 
     const [usedLetters, setUsedLetters] = useState([]);
 
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(0);
 
     const location = useLocation(); 
     const wordSelected = location.state?.wordSelected; // If the state is not defined, it will return undefined, otherwise it will return the value of wordSelected
