@@ -10,10 +10,12 @@ function StartGame() {
     }
 
     return (
-        <div>
-            <h1>Start Game</h1>
+        <div className="">
+            <div className="flex justify-center text-[30px] text-green-600 font-extrabold mt-10">
+                <h1>Start Game !!</h1>
+            </div>
             <TextInputFormContainer onSubmit={handleSubmit} />
         </div>
     );
-}
+}   
 export default StartGame;

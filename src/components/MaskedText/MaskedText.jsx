@@ -10,11 +10,13 @@ function MaskedText({ text, usedLetters }) {
     const letters = getAllCharacters(text, usedLetters).split('');
     return (
         <>
+          <div className="m-10 text-[30px] font-semibold">
             {letters.map((letter, index) => {
-                return (
-                    <span key={`letter-${index}`} className="inline-block mx-1 ">{letter}</span>
-                )
-            })}
+                    return (
+                        <span key={`letter-${index}`} className="inline-block mx-1 ">{letter}</span>
+                    )
+                })}
+          </div>
         </>
     )
 }
