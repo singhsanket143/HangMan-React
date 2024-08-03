@@ -12,7 +12,7 @@ function MaskedText({ text, usedLetters }) {
         <>
             {letters.map((letter, index) => {
                 return (
-                    <span key={`letter-${index}`} className="inline-block mx-1 ">{letter}</span>
+                    <span key={`letter-${index}`} className="inline-block mx-1 text-white text-[20px]">{letter}</span>
                 )
             })}
         </>

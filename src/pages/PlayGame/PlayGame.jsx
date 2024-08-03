@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import MaskedText from "../../components/MaskedText/MaskedText";
 import LetterButtons from "../../components/LetterButtons/LetterButtons";
 import { useState } from "react";
@@ -7,7 +7,6 @@ import HangMan from "../../components/HangMan/HangMan";
 function PlayGame() {
 
     const [usedLetters, setUsedLetters] = useState([]);
-
     const [step, setStep] = useState(0);
 
     const location = useLocation(); 
@@ -24,13 +23,14 @@ function PlayGame() {
     }
 
     return (
-        <div>
-            <h1>Play Game</h1>
+        <div className="p-10 w-full">
+            <h1 className="text-white text-[25px] text-center font-bold">Guess the word</h1>
             
-            <MaskedText text={wordSelected} usedLetters={usedLetters} />
-            <hr/>
+            <div className="flex justify-center my-3 font-bold"> 
+                <MaskedText text={wordSelected} usedLetters={usedLetters} />
+            </div>
 
-            <div className="flex justify-between items-center">
+            <div className="mt-12 flex justify-between w-[1000px]">
                 <div className="basis-2/4">
                     <LetterButtons  text={wordSelected} usedLetters={usedLetters} onLetterClick={handleLetterClick} />
                 </div>
@@ -41,12 +41,6 @@ function PlayGame() {
                 
             </div>
 
-            
-
-    
-            <hr />
-
-            <Link to='/start' className="text-blue-600 underline hover:text-blue-700"> Start Game </Link>
         </div>
     );
 }
