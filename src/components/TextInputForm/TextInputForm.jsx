@@ -4,7 +4,7 @@ import Button from "../Button/Button" ;
 
 function TextInputForm({ handleFormSubmit, handleTextInputChange, value, inputType, setInputType }) {
     return (
-        <form className="flex items-end" onSubmit={handleFormSubmit}>
+        <form className="flex items-end gap-2" onSubmit={handleFormSubmit}>
             <div className="mr-2 flex-1">
                  <TextInput 
                     label="Enter a word or phrase"

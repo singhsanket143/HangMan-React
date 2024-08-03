@@ -8,9 +8,9 @@ function LetterButtons({ text, usedLetters, onLetterClick }) {
 
     const buttonStyle = function(letter) {
         if (selectedLetters.has(letter)) {
-            return `${originalCharacters.has(letter) ? 'bg-green-600  border-green-700' : 'border-[#000] border-4 bg-red-600' }  `
+            return `${originalCharacters.has(letter) ? 'bg-green-700  border-green-700' : 'border-[#000] bg-red-600' }  `
         } else {
-            return 'bg-blue-600 border-blue-700 hover:bg-blue-700'
+            return 'bg-[#101010]  hover:bg-[#000]'
         }
     }
 
@@ -26,7 +26,7 @@ function LetterButtons({ text, usedLetters, onLetterClick }) {
                 value={letter}
                 disabled={selectedLetters.has(letter)}
                 onClick={handleClick}
-                className={`h-12 w-12 m-1 rounded-md focus:outline-none text-white ${buttonStyle(letter)}`}
+                className={`h-12 w-12 m-1 rounded-md focus:outline-none text-white ${buttonStyle(letter)} transition-transform transform hover:scale-105`}
             >
                 {letter}
             </button>
